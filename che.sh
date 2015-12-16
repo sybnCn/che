@@ -11,9 +11,9 @@
 #
 
 BASEDIR=$(dirname $0)
-VERSION=`basename $BASEDIR/assembly-sdk/target/assembly-sdk-*/`
+VERSION=`basename $BASEDIR/assembly-ide/target/assembly-ide-*/`
 
-ASSEMBLY_BIN_DIR=$BASEDIR/assembly-sdk/target/$VERSION/$VERSION/bin
+ASSEMBLY_BIN_DIR=$BASEDIR/assembly-ide/target/$VERSION/$VERSION/bin
 
 if [ ! -d "${ASSEMBLY_BIN_DIR}" ]
 then

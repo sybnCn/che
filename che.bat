@@ -12,15 +12,15 @@ rem
 set CHE_APP_DIR="%userprofile%\AppData\Local\che\"
 echo %CHE_APP_DIR%
 set DIRNAME=%~dp0%
-set FILE=%DIRNAME%\assembly-sdk\target\assembly-sdk-*
+set FILE=%DIRNAME%\assembly-ide\target\assembly-ide-*
 for /F %%i in ("%FILE%") do (set VERSION=%%~nxi)
 
-set CATALINA_HOME=%DIRNAME%assembly-sdk\target\%VERSION%\%VERSION%
+set CATALINA_HOME=%DIRNAME%assembly-ide\target\%VERSION%\%VERSION%
 set ASSEMBLY_BIN_DIR=%CATALINA_HOME%\bin
 echo %ASSEMBLY_BIN_DIR%
 IF exist %ASSEMBLY_BIN_DIR% (
     TITLE "Eclipse Che"
-    set CHE_HOME_DIR=%DIRNAME%assembly-sdk\target\%VERSION%\%VERSION%
+    set CHE_HOME_DIR=%DIRNAME%assembly-ide\target\%VERSION%\%VERSION%
     echo %CHE_HOME_DIR%
     rem We need to copy ext-server.zip and terminal to the current User directory it because
     rem docker on Windows OS an mount only shared directory in Virtual Box via boot2docker 
